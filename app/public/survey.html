@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FriendFinder</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 </head>
 <style>
     html {
@@ -15,36 +15,26 @@
         overflow: scroll;
         text-align: center;
     }
-
-    
 </style>
-
 <body>
     <ion-content>
-
         <ion-card>
-
             <ion-card-header>
                 <!-- <img src="./assets/images/header.jpg" /> -->
-
                 <ion-card-subtitle>About You</ion-card-subtitle>
                 <ion-card-title>Survey Questions</ion-card-title>
             </ion-card-header>
-
+            
         </ion-card>
-
-
         <ion-card>
             <ion-card-subtitle>Name (Required)</ion-card-subtitle>
             <ion-input type="text" id="name" class="form-control" placeholder="Enter Name" required> </ion-input>
-
             <ion-card-subtitle>Link toPhoto Image (Required)</ion-card-subtitle>
             <ion-input type="text" id="photo" class="form-control" placeholder="URL to your photo" required>
             </ion-input>
             <hr>
         </ion-card>
         <ion-card>
-
             <ion-card-title><strong>Question 1</strong></ion-card-title>
             <ion-card-subtitle>Your mind is always buzzin with unexplored ideas and plans.</ion-card-subtitle>
             <br>
@@ -61,7 +51,6 @@
             <ion-card-subtitle>Generally speaking, you rely more on your experience than your imagination.
             </ion-card-subtitle>
             <br>
-
             <ion-select id="q2" placeholder="Question 2">
                 <ion-select-option value="1">1 (Strongly Disagree)</ion-select-option>
                 <ion-select-option value="2">2</ion-select-option>
@@ -75,7 +64,6 @@
             <ion-card-subtitle>You find it easy to stay relaxed and focused even when there is some pressure.
             </ion-card-subtitle>
             <br>
-
             <ion-select id="q3" placeholder="Question 3">
                 <ion-select-option value="1">1 (Strongly Disagree)</ion-select-option>
                 <ion-select-option value="2">2</ion-select-option>
@@ -88,7 +76,6 @@
             <ion-card-title><strong>Question 4</strong></ion-card-title>
             <ion-card-subtitle>You rarely do something just out of sheer curiosity.</ion-card-subtitle>
             <br>
-
             <ion-select id="q4" placeholder="Question 4">
                 <ion-select-option value="1">1 (Strongly Disagree)</ion-select-option>
                 <ion-select-option value="2">2</ion-select-option>
@@ -101,7 +88,6 @@
             <ion-card-title><strong>Question 5</strong></ion-card-title>
             <ion-card-subtitle>People can rarely upset you.</ion-card-subtitle>
             <br>
-
             <ion-select id="q5" placeholder="Question 5">
                 <ion-select-option value="1">1 (Strongly Disagree)</ion-select-option>
                 <ion-select-option value="2">2</ion-select-option>
@@ -114,7 +100,6 @@
             <ion-card-title><strong>Question 6</strong></ion-card-title>
             <ion-card-subtitle>It is often difficult for you to releate to other people's feelings.</ion-card-subtitle>
             <br>
-
             <ion-select id="q6" placeholder="Question 6">
                 <ion-select-option value="1">1 (Strongly Disagree)</ion-select-option>
                 <ion-select-option value="2">2</ion-select-option>
@@ -128,7 +113,6 @@
             <ion-card-subtitle>In a dicsussion, truth shoud be more important than people's sensitivities.
             </ion-card-subtitle>
             <br>
-
             <ion-select id="q7" placeholder="Question 7">
                 <ion-select-option value="1">1 (Strongly Disagree)</ion-select-option>
                 <ion-select-option value="2">2</ion-select-option>
@@ -141,7 +125,6 @@
             <ion-card-title><strong>Question 8</strong></ion-card-title>
             <ion-card-subtitle>You rarely get carried away by fantasies and ideas.</ion-card-subtitle>
             <br>
-
             <ion-select id="q8" placeholder="Question 8">
                 <ion-select-option value="1">1 (Strongly Disagree)</ion-select-option>
                 <ion-select-option value="2">2</ion-select-option>
@@ -156,7 +139,6 @@
                 supported by facts or
                 not.</ion-card-subtitle>
             <br>
-
             <ion-select id="q9" placeholder="Question 9">
                 <ion-select-option value="1">1 (Strongly Disagree)</ion-select-option>
                 <ion-select-option value="2">2</ion-select-option>
@@ -169,7 +151,6 @@
             <ion-card-title><strong>Question 10</strong></ion-card-title>
             <ion-card-subtitle>You feel more energetic after spending time with a group of people.</ion-card-subtitle>
             <br>
-
             <ion-select id="q10" placeholder="Question 10">
                 <ion-select-option value="1">1 (Strongly Disagree)</ion-select-option>
                 <ion-select-option value="2">2</ion-select-option>
@@ -178,36 +159,27 @@
                 <ion-select-option value="5">5 (Strongly Agree)</ion-select-option>
             </ion-select>
         </ion-card>
-    
-
         <!--Submit Button-->
         <ion-button color="primary" type="submit" id="submit">
-         Submit
+            Submit
         </ion-button>
         <hr>
-
         </div>
-
         <!-- Modal -->
-
     </ion-content>
-
     <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
     <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css" />
-
-
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
     <script type="text/javascript">
         async function presentToast() {
             const toast = document.createElement('ion-toast');
             toast.message = 'Finish the survey first.';
             toast.duration = 2000;
-
             document.body.appendChild(toast);
             return toast.present();
         }
-
-
         customElements.define('modal-page', class extends HTMLElement {
             connectedCallback() {
                 this.innerHTML = `
@@ -232,83 +204,43 @@
             </div>`;
             }
         });
-
         function presentModal() {
-            // create the modal with the `modal-page` component
             const modalElement = document.createElement('ion-modal');
             modalElement.component = 'modal-page';
-
-            // present the modal
             document.body.appendChild(modalElement);
             return modalElement.present();
         }
-
-        //Capture inputs
         document.getElementById("submit").addEventListener('click', () => {
-            //console.log("button clicked");
             event.preventDefault();
-
-            validateForm = () => {
-                //validate input forms
+            function validateForm() {
                 var isValid = true;
-
-                var formControl = document.getElementsByClassName('form-control');
-                Array.prototype.forEach.call(formControl, function (el, i) {
-                    if (this.value === "") {
+                $('.form-control').each(function () {
+                    if ($(this).val() === '')
                         isValid = false;
-                      
-                    }
-                });
-
-                var ionSelect = document.getElementsByClassName('ion-select');
-                Array.prototype.forEach.call(ionSelect, function (el, i) {
-                    if (this.value === "") {
-                        isValid = false;
-                     
-                    }
                 });
                 return isValid;
             }
-
-            if (validateForm()) {
-                //build object of user inputs
+            if (validateForm() == true) {
                 var userData = {
-                    name: document.querySelector("#name > input").value,
-                    photo: document.querySelector("#photo > input").value,
-                    scores: [
-                        document.querySelector("#q1").shadowRoot.querySelector("button").value,
-                        document.querySelector("#q2").shadowRoot.querySelector("button").value,
-                        document.querySelector("#q3").shadowRoot.querySelector("button").value,
-                        document.querySelector("#q4").shadowRoot.querySelector("button").value,
-                        document.querySelector("#q5").shadowRoot.querySelector("button").value,
-                        document.querySelector("#q6").shadowRoot.querySelector("button").value,
-                        document.querySelector("#q7").shadowRoot.querySelector("button").value,
-                        document.querySelector("#q8").shadowRoot.querySelector("button").value,
-                        document.querySelector("#q9").shadowRoot.querySelector("button").value,
-                        document.querySelector("#q10").shadowRoot.querySelector("button").value,
-
+                    name: $("#name").val(),
+                    photo: $("#photo").val(),
+                    scores: [$("#q1").val(), $("#q2").val(), $("#q3").val(), $("#q4").val(), $("#q5").val(),
+                        $("#q6").val(), $("#q7").val(), $("#q8").val(), $("#q9").val(), $("#q10").val(),
                     ]
-                };
-
-                //AJAX post call
-
-
-                var request = new XMLHttpRequest();
-                request.open('POST', '/api/friends', true);
-                request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
-                request.send(userData)
-                    .then(data => {
-                        console.log(data);
-                        presentModal()
-                        document.querySelector("#match-name").text(data.name);
-                        document.querySelector("#match-img").attr("src", data.photo);
-                    });
+                }
+                console.log(userData);
+                var currentURL = window.location.origin;
+                $.post(currentURL + "/api/friends", userData, function (data) {
+                    console.log('%c%s', 'color: #f2ceb6', data);
+                    $("#matc-name").text(data.name);
+                    $('#match-img').attr("src", data.photo);
+                    presentModal()
+                });
             } else {
-                presentToast()
+                presentToast();
             }
+            return false;
         });
     </script>
 </body>
-
-
 </html>

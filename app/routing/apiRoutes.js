@@ -1,6 +1,4 @@
-
 var friendsData = require("../data/friends");
-
 findMatch =(userScore)=>{
     var index = 0;
     var lowestDiff = 0;
@@ -20,12 +18,10 @@ findMatch =(userScore)=>{
     }
     return index;
 }
-
 module.exports = (app)=>{
     app.get('/api/friends', (req, res)=>{
         res.json(friendsData);
     });
-    
     app.post('/api/friends', (req, res)=>{
         var userData = req.body;
         var index = findMatch(userData.scores);
